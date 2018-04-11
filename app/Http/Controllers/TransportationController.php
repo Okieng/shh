@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Transportation;
+use App\transportationtype;
 
 class TransportationController extends Controller
 {
@@ -25,9 +26,9 @@ class TransportationController extends Controller
      */
     public function create()
     {
-        $transportation = Transportation::all();
-
-        return view('transportation.create',compact('transportation'));
+        $transportation = transportation::all();
+        $transportationtype = transportationtype::all();
+        return view('transportation.create',compact('transportation' , 'transportationtype'));
     }
 
     /**

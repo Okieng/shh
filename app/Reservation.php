@@ -8,4 +8,16 @@ class Reservation extends Model
 {
     protected $table = 'reservation';
      public $timestamps = false;
+
+     public function customer()
+     {
+     	return $this->belongsTo('App\Customer' , 'customer_id');
+     }
+     public function rute()
+     {
+     	return $this->belongsTo('App\Rute' , 'rute_id' );
+     }
+     public function user(){
+     	return $this->belongsTo('App\User' , 'user_id');
+     }
 }

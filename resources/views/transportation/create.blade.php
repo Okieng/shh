@@ -10,8 +10,8 @@
               <div class="form-group">
                   <label>transportation_typeid</label>
                   <select name="c">
-                   @foreach ($transportation as $use)
-                    <option value="{{$use->id}}">{{$use->id}}</option>
+                   @foreach ($transportationtype as $use)
+                    <option value="{{$use->id}}">{{$use->description}}</option>
                     @endforeach
                     </select>
               </div>

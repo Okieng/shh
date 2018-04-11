@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Rute;
+use App\Transportation;
+use App\Transportationtype;
 
 class RuteController extends Controller
 {
@@ -26,8 +28,10 @@ class RuteController extends Controller
     public function create()
     {
         $rute = Rute::all();
+        $transportation = transportation::all();
+        $transportationtype = transportationtype::all();
 
-        return view('rute.create',compact('rute'));
+        return view('rute.create',compact('rute' , 'transportation' , 'transportationtype'));
     }
 
     /**

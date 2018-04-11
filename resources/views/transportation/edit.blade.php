@@ -19,7 +19,11 @@
               </div>
               <div class="form-group">
                   <label>transportation_typeid</label>
-                  <input type="text" class="form-control" name="c"  value="{{$transportation -> transportation_typeid}}" dawdada="tanggal lahir">
+                  <select name="c">
+                   @foreach ($transportationtype as $use)
+                    <option value="{{$use->id}}">{{$use->description}}</option>
+                    @endforeach
+                    </select>
               </div>
               <input type="hidden" name="_method" value="put"> 
         <input type="hidden" name="_token" value="{{csrf_token()}}">

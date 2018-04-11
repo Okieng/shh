@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Reservation;
-
+use App\Rute;
+use App\Customer;
+use App\User;
 class ReservationController extends Controller
 {
     /**
@@ -26,8 +28,11 @@ class ReservationController extends Controller
     public function create()
     {
         $reservation = Reservation::all();
+        $rute = Rute::all();
+        $customer = Customer::all();
+        $user = User::all();
 
-        return view('reservation.create',compact('reservation'));
+        return view('reservation.create',compact('reservation' , 'rute' , 'customer' , 'user'));
     }
 
     /**
@@ -43,7 +48,7 @@ class ReservationController extends Controller
         $reservation->reservation_code = $request->a;
         $reservation->reservation_at= $request->b;
         $reservation->reservation_date= $request->c;
-        $reservation->costumerid= $request->d;
+        $reservation->customerid= $request->d;
         $reservation->seat_code= $request->e;
         $reservation->rute_id= $request->f;
         $reservation->userid= $request->g;
@@ -93,7 +98,7 @@ class ReservationController extends Controller
         $reservation->reservation_code = $request->a;
         $reservation->reservation_at= $request->b;
         $reservation->reservation_date= $request->c;
-        $reservation->costumerid= $request->d;
+        $reservation->customerid= $request->d;
         $reservation->seat_code= $request->e;
         $reservation->rute_id= $request->f;
         $reservation->userid= $request->g;
