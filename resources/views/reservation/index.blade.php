@@ -8,8 +8,8 @@
                             {{$data -> reservation_date}}<br>
                             {{$data -> customer -> name}}<br>
                             {{$data -> seat_code}}<br>
-                            {{$data -> rute_id}}<br>
-                            {{$data -> userid}}<br>
+                            {{$data -> rute -> depart_at}}<br>
+                            {{$data -> users -> name}}<br>
 <a href="/reservation/{{$data->id}}/edit"> Edit</a>
 
                             <form class="" action="/reservation/{{$data->id}}" method="post">
