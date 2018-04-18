@@ -80,8 +80,11 @@ class ReservationController extends Controller
     public function edit($id)
     {
         $reservation = Reservation::find($id);
+        $rute = Rute::all();
+        $customer = Customer::all();
+        $user = User::all();
 
-        return view('reservation.edit',compact('reservation'));
+        return view('reservation.edit',compact('reservation' , 'rute' , 'customer' , 'user'));
     }
 
     /**

@@ -20,6 +20,9 @@ Route::resource('transportationtype','transportationtypeController');
 Route::resource('transportation','transportationController');
 Route::resource('reservation','reservationController');
 Route::resource('rute','ruteController');
+Route::resource('pengguna','PenggunaController');
+
+Route::get('caritiket', 'PenggunaController@search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

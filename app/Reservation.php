@@ -15,7 +15,7 @@ class Reservation extends Model
      }
      public function rute()
      {
-     	return $this->belongsTo('App\Rute' , 'rute_id' );
+     	return $this->belongsTo('App\rute' , 'rute_id' );
      }
      public function user(){
      	return $this->belongsTo('App\User' , 'userid');

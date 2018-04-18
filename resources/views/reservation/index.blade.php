@@ -9,7 +9,7 @@
                             {{$data -> customer -> name}}<br>
                             {{$data -> seat_code}}<br>
                             {{$data -> rute -> depart_at}}<br>
-                            {{$data -> user -> email}}<br>
+                            {{$data -> user -> name}}<br>
 <a href="/reservation/{{$data->id}}/edit"> Edit</a>
 
                             <form class="" action="/reservation/{{$data->id}}" method="post">
